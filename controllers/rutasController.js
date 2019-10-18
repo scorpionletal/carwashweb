@@ -34,6 +34,27 @@ controller.aboutGet = function (req, res) {
         tipo: 'Productos'
     });
 }
+
+controller.getHome = function (req,res){
+    console.log('estoy en home');
+    res.render('pages/home');
+}
+controller.getServices = function (req,res){
+    console.log('estoy en services');
+    res.render('pages/services');
+}
+controller.getLocations = function (req,res){
+    console.log('estoy en locations');
+    res.render('pages/locations');
+}
+controller.getAbout = function (req,res){
+    console.log('estoy en about');
+    res.render('pages/about');
+}
+controller.getContact = function (req,res){
+    console.log('estoy en contact');
+    res.render('pages/contact');
+}
 /*
 controller.blog_detail_leftbarGet = function (req, res) {
     console.log('blog-detail-leftbar');

@@ -4,10 +4,10 @@ var queries = require('./queries');
 
 // run query to db
 var dbConfig = {
-   host: 'localhost',
-   user: 'root',
-   password: '',
-   database: 'alarmas',
+   host: process.env.DB_HOST,
+   user: process.env.DB_USER,
+   password: process.env.DB_PASSWORD,
+   database: process.env.DB_NAME,
 };
 
 var runQuery = function(Query,Data,callback){

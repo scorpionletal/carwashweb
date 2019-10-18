@@ -1,10 +1,11 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 const app = express();
 const routes = require('./routes/index');
 
-require('dotenv').config();
+
 
 //settings
 app.set('port', process.env.PORT || 3000);
@@ -24,7 +25,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(routes);
 
 //static files
-//app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'public')));
 
 //start the server
 app.listen(app.get('port'), ()=>{

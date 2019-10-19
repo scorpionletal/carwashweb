@@ -1,0 +1,167 @@
+extends ../layout/home.pug
+
+block view
+  .main-banner-2
+  // //banner
+  // page details
+  .breadcrumb-agile.bg-light.py-2
+    ol.breadcrumb.bg-light.m-0
+      li.breadcrumb-item
+        a(href='index.html') Home
+      li.breadcrumb-item.active(aria-current='page') About Us
+  // //page details
+  // about
+  section#about.w3ls-bnrbtm.py-5
+    .container.py-xl-5.py-lg-3
+      .title-section.text-center.mb-md-5.mb-4
+        h3.w3ls-title.mb-3
+          | About 
+          span Us
+        p.titile-para-text.mx-auto
+          | Inventore veritatis et quasi architecto beatae vitae dicta sunt
+          | explicabo.Nemo
+          | enim totam rem aperiam.
+      .row
+        .col-lg-6.pr-xl-5.mt-xl-2.mt-lg-0
+          h3.title-sub.mb-4
+            | Donec conse sapien archi
+            br
+            | ut cursus rhons.
+          p.sub-para
+            | Nullam dui mi, vulputate ac metus
+            | at, semper
+            | varius orci. Nulla accumsan ac elit in congue. Class aptent taciti sociosqu ad litora torquent
+            | per conubia.
+          p.sub-para.pt-4.mt-4.border-top
+            | Donec consequat sapien ut leo cursus rhoncus. Nullam dui
+            | mi, vulputate ac metus at, semper varius orci..
+        .col-lg-6.text-center.mt-lg-0.mt-4
+          img.img-fluid(src='images/ab.jpg' alt='about')
+  // //about
+  // services
+  section#services.middle.py-5
+    .container.py-xl-5.py-lg-3
+      .title-section.text-center.mb-md-5.mb-4
+        p.w3ls-title-sub Our Work
+        h3.w3ls-title.mb-3
+          | Excellent 
+          span Services
+      .row.grids-w3.py-xl-5.py-lg-4.pt-lg-0.pt-4
+        .col-lg-5.w3pvt-lauits_banner_bottom_left
+          .row
+            .col-8.wthree_banner_bottom_grid_right.text-right
+              h4.mb-3
+                a(href='login.html') Free Shipping
+              p Morbi viverra lacus commodo felis semper lectus feugiat.
+            .col-4.wthree_banner_bottom_grid_left.text-lg-right.text-center
+              img.img-fluid(src='images/s1.png' alt='')
+        .col-lg-2.w3pvt-lauits_banner_bottom_left
+        .col-lg-5.w3pvt-lauits_banner_bottom_left.mt-lg-0.mt-4
+          .row
+            .col-4.wthree_banner_bottom_grid_left.text-lg-right.text-center
+              img.img-fluid(src='images/s2.png' alt='')
+            .col-8.wthree_banner_bottom_grid_right
+              h4.mb-3
+                a(href='login.html') Free &amp; Easy Returns
+              p Morbi viverra lacus commodo felis semper lectus feugiat.
+      .row.grids-w3.py-xl-5.py-lg-4.mt-lg-0.mt-4
+        .col-lg-4.w3pvt-lauits_banner_bottom_left
+          .row
+            .col-8.wthree_banner_bottom_grid_right.text-right.pl-lg-0
+              h4.mb-3
+                a(href='login.html') Online Order
+              p Morbi viverra lacus commodo felis semper lectus feugiat.
+            .col-4.wthree_banner_bottom_grid_left.text-lg-right.text-center.pr-lg-0
+              img.img-fluid(src='images/s3.png' alt='')
+        .col-lg-4.w3pvt-lauits_banner_bottom_left.pr-0
+        .col-lg-4.w3pvt-lauits_banner_bottom_left.mt-lg-0.mt-4
+          .row
+            .col-4.wthree_banner_bottom_grid_left.text-lg-right.text-center.pl-lg-0
+              img.img-fluid(src='images/s4.png' alt='')
+            .col-8.wthree_banner_bottom_grid_right.pr-lg-0
+              h4.mb-3
+                a(href='login.html') 24/7 Support
+              p Morbi viverra lacus commodo felis semper lectus feugiat.
+    .img-blog-2
+      img.img-fluid(src='images/img.png' alt='')
+  // //services
+  // team
+  #chefs.team.py-5
+    .container-fluid.py-xl-5.py-lg-3
+      .title-section.text-center.mb-md-5.mb-4
+        h3.w3ls-title.mb-3
+          | Our 
+          span Chefs
+        p.titile-para-text.mx-auto
+          | Inventore veritatis et quasi architecto beatae vitae dicta sunt
+          | explicabo.Nemo
+          | enim totam rem aperiam.
+      .row.team-bottom.pt-4
+        .col-lg-3.col-6.team-grid
+          a(href='#team')
+            img.img-fluid(src='images/t1.png' alt='')
+          .caption
+            .team-text
+              h4
+                a(href='#team') Mack Joe
+            ul
+              li
+                a(href='#')
+                  i.fa.fa-facebook.f1(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-twitter.f2(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-google-plus.f3(aria-hidden='true')
+        .col-lg-3.col-6.team-grid
+          a(href='#team')
+            img.img-fluid(src='images/t2.png' alt='')
+          .caption
+            .team-text
+              h4
+                a(href='#team') Cruz Deo
+            ul
+              li
+                a(href='#')
+                  i.fa.fa-facebook.f1(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-twitter.f2(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-google-plus.f3(aria-hidden='true')
+        .col-lg-3.col-6.team-grid.mt-lg-0.mt-4
+          a(href='#team')
+            img.img-fluid(src='images/t3.png' alt='')
+          .caption
+            .team-text
+              h4
+                a(href='#team') Rochy Jae
+            ul
+              li
+                a(href='#')
+                  i.fa.fa-facebook.f1(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-twitter.f2(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-google-plus.f3(aria-hidden='true')
+        .col-lg-3.col-6.team-grid.mt-lg-0.mt-4
+          a(href='#team')
+            img.img-fluid(src='images/t4.png' alt='')
+          .caption
+            .team-text
+              h4
+                a(href='#team') Rojo Poy
+            ul
+              li
+                a(href='#')
+                  i.fa.fa-facebook.f1(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-twitter.f2(aria-hidden='true')
+              li
+                a(href='#')
+                  i.fa.fa-google-plus.f3(aria-hidden='true')

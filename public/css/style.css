@@ -6,8 +6,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 /*-- Reset Code --*/
 body {
-    padding: 0;
-    margin: 0;
+    /*margin-right: 70px;
+    margin-left: 70px;
+    padding: 0;*/
+    /*margin: 150px;*/
     background: #FFF;
     font-family: 'Lato', sans-serif;
 }

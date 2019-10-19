@@ -4,10 +4,10 @@ const router = Router();
 
 router.get('/',rutasController.indexGet);
 router.get('/products',rutasController.getdata);
-router.get('/home',rutasController.getHome);
+//router.get('/home',rutasController.getHome);
 router.get('/services',rutasController.getServices);
 router.get('/locations',rutasController.getLocations);
 router.get('/about',rutasController.getAbout);
-router.get('/Contact',rutasController.getContact);
+router.get('/contact',rutasController.getContact);
 
 module.exports = router;

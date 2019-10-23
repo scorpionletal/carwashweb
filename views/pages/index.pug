@@ -2,127 +2,423 @@ extends ../layout/home.pug
 
 
 block view
-  
+  // slides images
+  section#carouselExampleFade.carousel.slide.carousel-fade(data-ride='carousel')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='images/carwash/impecable.png' alt='First slide')
+      .carousel-item
+        img.d-block.w-100(src='images/carwash/lamejor1.png' alt='Second slide')
+      .carousel-item
+        img.d-block.w-100(src='images/carwash/ecoamigable2.png' alt='Third slide')
+    a.carousel-control-prev(href='#carouselExampleFade' role='button' data-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.sr-only Previous
+    a.carousel-control-next(href='#carouselExampleFade' role='button' data-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.sr-only Next
+  //- section#carouselExampleControls.carousel.slide(data-ride='carousel')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='images/carwash/LIMPIADOR.png' alt='First slide')
+      .carousel-item
+        img.d-block.w-100(src='images/carwash/impecable.png' alt='Second slide')
+      .carousel-item
+        img.d-block.w-100(src='images/carwash/lamejor1.png' alt='Third slide')
+      a.carousel-control-prev(href='#carouselExampleControls' role='button' data-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.sr-only Previous
+      a.carousel-control-next(href='#carouselExampleControls' role='button' data-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.sr-only Next    
+ 
   .baneer-w3ls
     .row.no-gutters
-      .col-xl-5.col-lg-6
+      .col-xl-12.col-lg-6.center-block
         .banner-left-w3
           .container
             .banner-info_agile_w3ls
-              h5 Only Fresh Burgers
-              h3.text-da.mb-4
-                | Flame 
-                span Grilled Burger
+              //h5 Only Fresh Burgers
+              h3.text-da.mb-2
+                | BIENVENIDO A
+                span  GLOBAL CAR WASH
               p
-                | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                | laudantium
-              a.button-w3ls.active.mt-5(href='about.html')
-                | Read More
-                span.fa.fa-caret-right.ml-1(aria-hidden='true')
+                | BIENVENIDO A GLOBAL CAR WASH ¿Qué es mejor que un lavado de autos prístino de $ 6 que toma 5 minutos o menos? No mucho, si nos preguntas! Presentamos FAST5XPRESS, la solución de hoy para las personas ocupadas en movimiento que desean cuidar bien sus automóviles. ¡FAST5XPRESS también es ecológico!
+                |¡Fácil para el mundo, fácil para tu billetera!
               a.button-w3ls.mt-5.ml-2(href='menu.html')
                 | Order Now
                 span.fa.fa-caret-right.ml-1(aria-hidden='true')
       .col-xl-7.col-lg-6.callbacks_container
-        // banner slider
-        #slider1.csslider.infinity
-          input#slides_1(type='radio' name='slides' checked='checked')
-          input#slides_2(type='radio' name='slides')
-          input#slides_3(type='radio' name='slides')
-          ul.banner_slide_bg
-            li
-              .banner-top1
-            li
-              .banner-top2
-            li
-              .banner-top3
-          .arrows
-            label(for='slides_1')
-            label(for='slides_2')
-            label(for='slides_3')
-          .navigation
-            div
-              label(for='slides_1')
-              label(for='slides_2')
-              label(for='slides_3')
-        // //banner slider
-  // //banner
+        
   .clearfix
-  // about
-  .about-bottom
-    .row.no-gutters
-      .col-lg-5.col-md-6.about
-      .col-lg-7.col-md-6.about-right-w3.text-right.py-md-5
-        .right-space.py-xl-5.py-lg-3
-          .title-section.mb-4
-            p.w3ls-title-sub About Us
-            h3.w3ls-title
-              | Welcome to 
-              span Tasty Burger
-          p.about-text
-            | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-            | doloremque
-            | laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-            | architecto
-            | beatae vitae dicta
-            | sunt explicabo.Nemo enim ipsam voluptatem quia voluptas sit.
-          a.button-w3ls.mt-5(href='about.html')
-            | Read More
-            span.fa.fa-caret-right.ml-1(aria-hidden='true')
-  // //about
-  // specials
-  section.blog_w3ls.py-5
-    .container.pb-xl-5.pb-lg-3
-      .title-section.text-center.mb-md-5.mb-4
-        p.w3ls-title-sub Tasty
-        h3.w3ls-title
-          | Our 
-          span Special
-      .row
-        // blog grid
-        .col-lg-4.col-md-6
-          .card.border-0.med-blog
-            .card-header.p-0
-              a(href='menu.html')
-                img.card-img-bottom(src='images/blog1.jpg' alt='Card image cap')
-            .card-body.border.border-top-0
-              h5.blog-title.card-title.m-0
-                a(href='menu.html') French Burger
-              p.mt-3 Cras ultricies ligula sed magna dictum porta auris blandita.
-              a.btn.button-w3ls.mt-4.mb-3(href='menu.html')
-                | View More
-                span.fa.fa-caret-right.ml-1(aria-hidden='true')
-        // //blog grid
-        // blog grid
-        .col-lg-4.col-md-6.mt-md-0.mt-5
-          .card.border-0.med-blog
-            .card-header.p-0
-              a(href='menu.html')
-                img.card-img-bottom(src='images/blog2.jpg' alt='Card image cap')
-            .card-body.border.border-top-0
-              h5.blog-title.card-title.m-0
-                a(href='menu.html') Veg Muffin
-              p.mt-3 Cras ultricies ligula sed magna dictum porta auris blandita.
-              a.button-w3ls.active.mt-4.mb-3(href='menu.html')
-                | View More
-                span.fa.fa-caret-right.ml-1(aria-hidden='true')
-        // //blog grid
-        // blog grid
-        .col-lg-4.col-md-6.mt-lg-0.mt-5
-          .card.border-0.med-blog
-            .card-header.p-0
-              a(href='menu.html')
-                img.card-img-bottom(src='images/blog3.jpg' alt='Card image cap')
-            .card-body.border.border-top-0
-              h5.blog-title.card-title.m-0
-                a(href='menu.html') Hashbrown Brioche
-              p.mt-3 Cras ultricies ligula sed magna dictum porta auris blandita.
-              a.button-w3ls.mt-4.mb-3(href='menu.html')
-                | View More
-                span.fa.fa-caret-right.ml-1(aria-hidden='true')
-        // //blog grid
-  // //specials
+  // aboutBIEN
+  .container-fluid(style='background:#fff')
+    .row.mb-5
+      .col-sm-4.d-flex
+        .card.card-body.flex-fill(style='background: rgba(0,0,255,.1)')
+            .card-title
+              h5.font-weight-bold.mb-5 APPLICATIONS
+            //- .card-text.mb-0
+            //-   | Some quick example text
+            ul.list-group.list-group-flush(style='background: rgba(0,0,255,.1)')
+              li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") ARMOR ALL Extreme Shine Carnauba Wax
+              li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") Citrus Foam Bath
+              li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") Under body flush
+              li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") ARMOR ALL Tire shine
+              li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") RAIN-X Complete Surface Protection
+              li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") SUPER DRY &amp; SHINE
+              li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") WHEEL BRITE Tire and Wheel Cleaner
+               li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") BLUE CORAL Clear Coat Sealant
+               li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") BLUE CORAL Triple Foam Wax &amp; Conditioner
+               li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") Clean Wash
+               li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") SPOT FREE RINSE
+               li.list-group-item.list-group-item-info(style="height:35px; line-height:1;") FREE VACUUMS
+               li.list-group-item.list-group-item-info(style="height:35px; line-height:1;")
+                 | *PRICES SUBJECT TO LOCATIONS. SEE   
+            .card-body(style='background: rgba(0,0,255,.1)')
+            
+              a.card-link(href='#!') Card 
+      .col-sm-2.d-flex
+         .card.card-body.flex-fill(style='background:#fff;color:#9aa2b4')
+            .card-title
+              h5.font-weight-bold.mb-0 PLATINUM
+            .card-text.mb-4.btn(style='background:rgba(	237,237,241,.6);color:#9aa2b4')
+              | valor
+            ul.list-group.list-group-flush.h-100
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              
+            .card-body(style='background: rgba(0,0,255,.1)')
+              a.card-link(href='#!') Card 
+            
+      .col-sm-2.d-flex
+         .card.card-body.flex-fill(style='background:rgba(255,215,0,.6);color:#d7a000')
+            .card-title
+              h5.font-weight-bold.mb-0 GOLD
+            .card-text.mb-4.btn(style='background:rgba(	184,134,11,06);color:#9aa2b4')
+              | valor
+            ul.list-group.list-group-flush.h-100
+              li.list-group-item(style="height:35px; line-height:1;")
+              li.list-group-item(style="height:35px; line-height:1;")
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              
+            .card-body(style='background: rgba(0,0,255,.1)')
+              a.card-link(href='#!') Card
+           
+      .col-sm-2.d-flex
+         .card.card-body.flex-fill.h-100(style='background:#DFDFE6;color:#747474')
+            .card-title
+              h5.font-weight-bold.mb-0 SILVER
+            .card-text.mb-4.btn(style='background:rgba(180, 180, 196,.6);color:#9aa2b4')
+              | valor
+            ul.list-group.list-group-flush.h-100.d-inline-block
+                  li.list-group-item(style="height:35px; line-height:1;")
+                  li.list-group-item(style="height:35px; line-height:1;")
+                  li.list-group-item(style="height:35px; line-height:1;")
+                  li.list-group-item(style="height:35px; line-height:1;")
+                  li.list-group-item(style="height:35px; line-height:1;")
+                  li.list-group-item(style="height:35px; line-height:1;")
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item(style="height:35px; line-height:1;")
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item(style="height:35px; line-height:1;")
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item(style="height:35px; line-height:1;")
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item(style="height:35px; line-height:1;")
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item(style="height:35px; line-height:1;")
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item(style="height:35px; line-height:1;")
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              
+            .card-body(style='background: rgba(0,0,255,.1)')
+              a.card-link(href='#!') Card 
+           
+      .col-sm-2.d-flex
+         .card.card-body.flex-fill.mh-100(style='background:#F9D0C0;color:#d65621;')
+            .card-title
+              h5.font-weight-bold.mb-0 BRONZE
+            .card-text.mb-4.btn(style='background:rgba(	214, 86, 33,.6);color:#9aa2b4')
+              | valor
+            ul.list-group.list-group-flush.h-100
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              li.list-group-item.list-group-item-danger(style="height:35px; line-height:1;")
+                img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              
+            .card-body(style='background: rgba(0,0,255,.1)')
+              a.card-link(href='#!') Card 
+     
+  //- .about-bottom
+    #page-wrap
+    .carttop-section
+      .table-wrapper
+        .scrollable
+          table.responsive(cellpadding='0' cellspacing='0')
+            tbody
+              tr
+                th(style='background: rgb(41, 108, 203); color: rgb(255, 255, 255);') APPLICATIONS
+                th(style='background:#fff;color:#9aa2b4')
+                  | Platinum 
+                  br
+                  | $14/wash*
+                th(style='background:#FFE28E;color:#d7a000')
+                  | Gold 
+                  br
+                  | $12/wash*
+                th(style='background:#DFDFE6;color:#747474')
+                  | Silver 
+                  br
+                  | $9/wash*
+                th(style='background:#F9D0C0;color:#d65621')
+                  | Bronze 
+                  br
+                  | $6/wash*
+              tr
+                td(style='')
+                  | ARMOR ALL Extreme 
+                  br
+                  | Shine Carnauba Wax
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td -
+                td -
+                td -
+              tr
+                td(style='') Citrus Foam Bath
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td -
+                td -
+                td -
+              tr
+                td(style='') Under body flush
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td -
+                td -
+                td -
+              tr
+                td(style='') ARMOR ALL Tire shine
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td -
+                td -
+              tr
+                td(style='')
+                  | RAIN-X Complete 
+                  br
+                  | Surface Protection
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td -
+                td -
+              tr
+                td(style='') SUPER DRY &amp; SHINE
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td -
+              tr
+                td(style='')
+                  | WHEEL BRITE Tire 
+                  br
+                  |  and Wheel Cleaner
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td -
+              tr
+                td(style='')
+                  | BLUE CORAL Clear
+                  br
+                  |  Coat Sealant
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td -
+              tr
+                td(style='')
+                  | BLUE CORAL Triple 
+                  br
+                  |  Foam Wax &amp; Conditioner
+                td(style='height:54px;')
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td -
+              tr
+                td(style='') Clean Wash
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+              tr
+                td(style='') SPOT FREE RINSE
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+              tr
+                td(style='') FREE VACUUMS
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+                td
+                  img(alt='' src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png')
+              tr
+                td(style='')
+                  | *See 
+                  a(href='https://www.fast5xpress.com/locations/') LOCATIONS
+                  |  for exact pricing.
+                td
+                  .patinum-btn
+                    a(onclick="giftCardaddToCart('14.00');") BUY NOW
+                td
+                  .gold-btn
+                    a(onclick="giftCardaddToCart('12.00');") BUY NOW
+                td
+                  .sliver-btn
+                    a(onclick="giftCardaddToCart('9.00');") BUY NOW
+                td
+                  .bronze-btn
+                    a(onclick="giftCardaddToCart('6.00');") BUY NOW
+        .pinned
+          table(cellpadding='0' cellspacing='0')      
+      //about
+    // specials
+  //- section.blog_w3ls.py-5
+  //-   .container.pb-xl-5.pb-lg-3
+  //-     .title-section.text-center.mb-md-5.mb-4
+  //-       p.w3ls-title-sub Tasty
+  //-       h3.w3ls-title
+  //-         | Our 
+  //-         span Special
+  //-     .row
+  //-       // blog grid
+  //-       .col-lg-4.col-md-6
+  //-         .card.border-0.med-blog
+  //-           .card-header.p-0
+  //-             a(href='menu.html')
+  //-               img.card-img-bottom(src='images/blog1.jpg' alt='Card image cap')
+  //-           .card-body.border.border-top-0
+  //-             h5.blog-title.card-title.m-0
+  //-               a(href='menu.html') French Burger
+  //-             p.mt-3 Cras ultricies ligula sed magna dictum porta auris blandita.
+  //-             a.btn.button-w3ls.mt-4.mb-3(href='menu.html')
+  //-               | View More
+  //-               span.fa.fa-caret-right.ml-1(aria-hidden='true')
+  //-       // //blog grid
+  //-       // blog grid
+  //-       .col-lg-4.col-md-6.mt-md-0.mt-5
+  //-         .card.border-0.med-blog
+  //-           .card-header.p-0
+  //-             a(href='menu.html')
+  //-               img.card-img-bottom(src='images/blog2.jpg' alt='Card image cap')
+  //-           .card-body.border.border-top-0
+  //-             h5.blog-title.card-title.m-0
+  //-               a(href='menu.html') Veg Muffin
+  //-             p.mt-3 Cras ultricies ligula sed magna dictum porta auris blandita.
+  //-             a.button-w3ls.active.mt-4.mb-3(href='menu.html')
+  //-               | View More
+  //-               span.fa.fa-caret-right.ml-1(aria-hidden='true')
+  //-       // //blog grid
+  //-       // blog grid
+  //-       .col-lg-4.col-md-6.mt-lg-0.mt-5
+  //-         .card.border-0.med-blog
+  //-           .card-header.p-0
+  //-             a(href='menu.html')
+  //-               img.card-img-bottom(src='images/blog3.jpg' alt='Card image cap')
+  //-           .card-body.border.border-top-0
+  //-             h5.blog-title.card-title.m-0
+  //-               a(href='menu.html') Hashbrown Brioche
+  //-             p.mt-3 Cras ultricies ligula sed magna dictum porta auris blandita.
+  //-             a.button-w3ls.mt-4.mb-3(href='menu.html')
+  //-               | View More
+  //-               span.fa.fa-caret-right.ml-1(aria-hidden='true')
+  //-       // //blog grid
+  //- // //specials
   // two grids
-  section.offer.pt-lg-3
+  //- section.offer.pt-lg-3
     .row.no-gutters
       .col-md-6.p-0
         .blog-sec-w3
@@ -150,7 +446,7 @@ block view
               span.fa.fa-caret-right.ml-1(aria-hidden='true')
   // //two grids
   // services
-  section#services.middle.py-5
+  //- section#services.middle.py-5
     .container.py-xl-5.py-lg-3
       .title-section.text-center.mb-md-5.mb-4
         p.w3ls-title-sub Our Work
@@ -197,7 +493,7 @@ block view
       img.img-fluid(src='images/img.png' alt='')
   // //services
   // blog
-  section#blog.blog_w3ls.py-5
+  //- section#blog.blog_w3ls.py-5
     .container.py-xl-5.py-lg-3
       .title-section.text-center.mb-md-5.mb-4
         p.w3ls-title-sub Posts
@@ -262,13 +558,299 @@ block view
               a.button-w3ls.mt-4(href='single.html')
                 | Read More
                 span.fa.fa-caret-right.ml-1(aria-hidden='true')
-        // //blog grid
-  // //blog
-  // slides images
-  section#masthead.wthree-slider
+  //- .container2
+    .dody-middlesection
+    .dody-inbox
+      .body-middle-heading
+        | WASH
+        span PACKAGES
+      div(style="color: #f63; font-size: 15px; text-transform: uppercase;text-align: center;font-family: 'Russo One',sans-serif;") Starting at
+      .dody-pricesection
+        .pricing_box.container-fluid
+          .row
+            .dodyprice-servicesleft.col-sm-4.table-condensed
+              .headingA APLICATIONS
+              .list
+                ul
+                  li.list-group-item.list-group-item-info ARMOR ALL Extreme Shine Carnauba Wax
+                  li.list-group-item.list-group-item-info Citrus Foam Bath
+                  li.list-group-item.list-group-item-info Under body flush
+                  li.list-group-item.list-group-item-info ARMOR ALL Tire shine
+                  li.list-group-item.list-group-item-info RAIN-X Complete Surface Protection
+                  li.list-group-item.list-group-item-info SUPER DRY &amp; SHINE
+                  li.list-group-item.list-group-item-info WHEEL BRITE Tire and Wheel Cleaner
+                  li.list-group-item.list-group-item-info BLUE CORAL Clear Coat Sealant
+                  li.list-group-item.list-group-item-info BLUE CORAL Triple Foam Wax &amp; Conditioner
+                  li.list-group-item.list-group-item-info Clean Wash
+                  li.list-group-item.list-group-item-info SPOT FREE RINSE
+                  li.list-group-item.list-group-item-info FREE VACUUMS
+                  li.list-group-item.list-group-item-info
+                    | *PRICES SUBJECT TO LOCATIONS. SEE 
+                    a(href='https://www.fast5xpress.com/locations/') LOCATIONS
+                    |  FOR EXACT PRICING.
+            // Platinum
+            .dodyprice-platinum.col-sm-2
+              .headingP Platinum
+              a.tooltip3(href='#')
+                .pricebg
+                  .dollertext $
+                  .pricetext 14
+                  .monthtext
+                    | /wash
+                    .star_icon *
+                span PRICES SUBJECT TO LOCATIONS
+              .list
+                ul
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              .shopp_platinum
+                a.addtocart(onclick="giftCardaddToCart('14.00');")
+            // Gold
+            .dodyprice-gold.col-sm-2
+              .headingG Gold
+              a.tooltip2(href='#')
+                .pricebg
+                  .dollertext $
+                  .pricetext 12
+                  .monthtext
+                    | /wash
+                    .star_icon *
+                span.goldpart PRICES SUBJECT TO LOCATIONS
+              .list
+                ul
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              .shopp_gold
+                a.addtocart(onclick="giftCardaddToCart('12.00');")
+            // Silver
+            .dodyprice-sliver.col-sm-2
+              .headingS Silver
+              a.tooltip2(href='#')
+                .pricebg
+                  .dollertext $
+                  .pricetext 9
+                  .monthtext
+                    | /wash
+                    .star_icon *
+                span PRICES SUBJECT TO LOCATIONS
+              .list
+                ul
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              .shopp_silver
+                a.addtocart(onclick="giftCardaddToCart('9.00');")
+            // bronze
+            .dodyprice-bronze.col-sm-2
+              .headingB Bronze
+              a.tooltip2(href='#')
+                .pricebg
+                  .dollertext $
+                  .pricetext 6
+                  .monthtext
+                    | /wash
+                    .star_icon *
+                span.bronze PRICES SUBJECT TO LOCATIONS
+              .list
+                ul
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+                  li.list-group-item
+                    img(src='https://www.fast5xpress.com/wp-content/themes/fast5xpress/images/tickmark.png' alt='')
+              .shopp_bronze
+                a.addtocart(onclick="giftCardaddToCart('6.00');")
+  //- .container-fluid
+    .row
+      .col-xs-6.col-md-3
+        .panel.panel-default.panel-med
+          .panel-heading
+            | Heading 1
+          .panel-body
+            | Body 1
+          .panel-footer
+            | Footer 1
+      .col-xs-6.col-md-3.cell-tall
+        .panel.panel-danger.panel-tall
+          .panel-heading
+            | Heading 2
+          .panel-body
+            | Body 2. Look out, this needs some attention!
+          .panel-footer
+            | Footer 2
+      //
+        On small and extra small devices, the viewport will render TWO cells
+        (12 / 6 = 2), so we need a clearfix every TWO cells. We also need to
+        say "don't show this clearfix when the viewport will render FOUR cells",
+        which it will do at medium size and up (12 / 3 = 4). We do that by adding
+        hidden-md and hidden-lg to our clearfix div, in effect instructing the
+        browser to not show it at all on a wider screen.
+      .clearfix.hidden-md.hidden-lg
+      // 
+      .col-xs-6.col-md-3.cell-tall
+        .panel.panel-success.panel-short
+          .panel-heading
+            | Heading 3
+          .panel-body
+            | Body 3. The file has successfully uploaded.
+          .panel-footer
+            | Footer 3
+      .col-xs-6.col-md-3
+        .panel.panel-default.panel-tall
+          .panel-heading
+            | Heading 4 Chart
+          .panel-body
+            | Body 4. Is this a cool graph or what?
+          .panel-footer
+            | Footer 4
+      //
+        We are never going to have more than FOUR cells. So every FOURTH cell,
+        we place a clearfix that will ALWAYS show. We do this by just leaving off
+        any of the hidden-* classes.
+      .clearfix
+      // 
+      .col-xs-6.col-md-3
+        .panel.panel-warning.panel-short
+          .panel-heading
+            | Heading 5
+          .panel-body
+            | Body 5.
+          .panel-footer
+            | Footer 5
+      .col-xs-6.col-md-3.cell-med
+        .panel.panel-warning.panel-tall
+          .panel-heading
+            | Heading 6
+          .panel-body
+            | Body 6.
+      //
+        After the sixth cell, we are at a multiple of TWO, but not FOUR so we
+        repeat the clearfix that we used after cell TWO.
+      .clearfix.hidden-md.hidden-lg
+      // 
+      .col-xs-6.col-md-3
+        .panel.panel-info.panel-tall
+          .panel-heading
+            | Heading 7
+          .panel-body
+            | Body 7.
+          .panel-footer
+            | Footer 7
+      .col-xs-6.col-md-3
+        .panel.panel-info.panel-med
+          .panel-heading
+            | Heading 8
+          .panel-body
+            | Body 8.
+          .panel-footer
+            | Footer 8
+      //
+        Now we have rendered EIGHT cells, which is a multiple of TWO AND FOUR,
+        so we put in a clearfix that's always visible.
+      .clearfix
+      // 
+      .col-xs-6.col-md-3.cell-med
+        .panel.panel-info.panel-short
+          .panel-heading
+            | Heading 9
+          .panel-body
+            | Body 9.
+          .panel-footer
+            | Footer 9
+      .col-xs-6.col-md-3.cell-med
+        .panel.panel-info.panel-tall
+          .panel-heading
+            | Heading 10
+          .panel-body
+            | Body 10.
+          .panel-footer
+            | Footer 10
+      //
+        After the 10th cell, once again a multiple of TWO but not FOUR...
+      .clearfix.hidden-md.hidden-lg
+      // 
+      .col-xs-6.col-md-3
+        .panel.panel-info.panel-tall
+          .panel-heading
+            | Heading 11
+          .panel-body
+            | Body 11.
+          .panel-footer
+            | Footer 11
+          
+           
+        
+          
   // //slides images
   // newsletter
-  section.subscribe-main.py-5
+  //- section.subscribe-main.py-5
     .container.py-xl-5.py-3
       .row.pb-lg-4.pt-lg-5
         .col-lg-6.col-md-9.text-center

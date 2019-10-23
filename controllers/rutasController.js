@@ -1,7 +1,9 @@
 //var dbconfig = require('../config/database');
 var DB = require('../models/database');
 var Database = new DB();
-
+const nodemailer = require('nodemailer');
+const SMTPConnection = require("nodemailer/lib/smtp-connection");
+//const Swal = require('sweetalert2');    
 //var database = new Database(dbconfig.connection);
 //var mysql = require('mysql');
 
@@ -45,7 +47,13 @@ controller.getServices = function (req,res){
 }
 controller.getLocations = function (req,res){
     console.log('estoy en locations');
-    res.render('pages/locations');
+    Database.getLocales(1,function(data){
+        console.log(data);
+        markers=data;
+        res.render('pages/locations', {datos : markers});
+       // res.render('pages/contact');
+    });
+   // res.render('pages/locations', {markers : markers});
 }
 controller.getAbout = function (req,res){
     console.log('estoy en about');
@@ -53,7 +61,63 @@ controller.getAbout = function (req,res){
 }
 controller.getContact = function (req,res){
     console.log('estoy en contact');
-    res.render('pages/contact');
+    Database.getDatos(1,function(data){
+        console.log(data);
+        res.render('pages/contact', { data : data, enviado:false} )
+       // res.render('pages/contact');
+    });
+
+}
+
+
+controller.enviarMensaje = function(req,res){
+    console.log(req);
+    console.log("======");
+    var SendMessage=false;
+    let mailOpts, smtpTrans;
+  smtpTrans = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+      
+      user: 'webryfcomunicaciones@gmail.com',
+      pass: 'RyFcomunicaciones123'
+    },
+    tls: {
+        rejectUnauthorized: false
+    }
+  });
+  mailOpts = {
+    from: req.body.name + ' &lt;' + req.body.email + '&gt;',
+    to: 'jfuertesl2@gmail.com',
+    subject: 'Nuevo mensaje para GLOBAL CAR WASH',
+    text: `            
+            Nombre: ${req.body.Name}
+            Correo: ${req.body.Email}
+            Telefono: ${req.body.Phone}
+            Empresa: ${req.body.Message}
+            Mensaje: ${req.body.Message}
+            `
+  };
+  smtpTrans.sendMail(mailOpts, function (error, response) {
+    if (error) {
+        return console.log(error);
+    }
+    else {
+        console.log("Correo enviado correctamente");
+        var SendMessage=true;
+      
+    }
+    this.createTransport.close();
+  });
+
+  Database.getDatos(1,function(data){
+    console.log(data);
+    res.render('pages/contact', { data : data, enviado:true} )
+   // res.render('pages/contact');
+});
+ 
 }
 /*
 controller.blog_detail_leftbarGet = function (req, res) {

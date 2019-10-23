@@ -9,5 +9,8 @@ router.get('/services',rutasController.getServices);
 router.get('/locations',rutasController.getLocations);
 router.get('/about',rutasController.getAbout);
 router.get('/contact',rutasController.getContact);
+router.post('/enviarMensaje',rutasController.enviarMensaje);
+
+
 
 module.exports = router;

@@ -40,7 +40,22 @@ DB.prototype.getData = function(data,callback){
        callback(res);
     });
  }
-
+ DB.prototype.getDatos = function(data,callback){
+   var Query = queries.getDatos;
+   var Data  = [data];
+   runQuery(Query,Data,function(res){
+      res = res.pop();
+      callback(res);
+   });
+}
+DB.prototype.getLocales = function(data,callback){
+   var Query = queries.getLocales;
+   var Data  = [data];
+   runQuery(Query,Data,function(res){
+     // res = res.pop();
+      callback(res);
+   });
+}
 /*DB.prototype.getSingleData = function(data,callback){
    var Query = queries.SQLGETSINGLEDATA;
    var Data  = [data];

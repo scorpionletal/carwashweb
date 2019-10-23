@@ -22,5 +22,10 @@ exports.getdataalarmas = getdataalarmas;
 var getdata = "SELECT * from tiempo_real ";
 exports.getdata = getdata;
 
+var getDatos = "SELECT * from datos";
+exports.getDatos = getDatos;
+
+var getLocales = "SELECT * from locales";
+exports.getLocales = getLocales;
 
 //exports.saveHistory = saveHistory;

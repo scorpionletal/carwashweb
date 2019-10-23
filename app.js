@@ -1,4 +1,5 @@
 const express = require('express');
+var session = require('express-session');
 const path = require('path');
 const bodyParser = require('body-parser');
 require('dotenv').config();
@@ -20,7 +21,7 @@ app.use((req, res, next)=>{
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-
+app.use(session({secret: 'ssshhhhh',saveUninitialized: true,resave: true}));
 //routes
 app.use(routes);
 

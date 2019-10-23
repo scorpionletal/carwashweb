@@ -3,6 +3,7 @@ var DB = require('../models/database');
 var Database = new DB();
 const nodemailer = require('nodemailer');
 const SMTPConnection = require("nodemailer/lib/smtp-connection");
+var sess;
 //const Swal = require('sweetalert2');    
 //var database = new Database(dbconfig.connection);
 //var mysql = require('mysql');
@@ -23,6 +24,8 @@ controller.getdata = (req, res) => {
 
 controller.indexGet = function (req, res) {
     console.log('index');
+    sess=req.session;
+    sess.email="test";
     res.render('pages/index', {
         title: 'Inicio | RYF',
         tipo: 'inicio'
@@ -30,7 +33,8 @@ controller.indexGet = function (req, res) {
    }
 
 controller.aboutGet = function (req, res) {
-    console.log('index');
+    console.log('inaboutt===========00dex');
+    
     res.render('pages/products', {
         title: 'Productos | RYF',
         tipo: 'Productos'
@@ -56,7 +60,8 @@ controller.getLocations = function (req,res){
    // res.render('pages/locations', {markers : markers});
 }
 controller.getAbout = function (req,res){
-    console.log('estoy en about');
+    console.log('estoy en about==================00');
+    console.log(sess.email);
     res.render('pages/about');
 }
 controller.getContact = function (req,res){

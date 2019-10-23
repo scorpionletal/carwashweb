@@ -1,68 +1,102 @@
 extends ../layout/home.pug
 
 block view
-  style.
-    #map {
-      width: 80%;
-      height: 500px;}
-    }
-
-  h3.col-lg-8.offset-lg-2 Elige entre nuestros locales:  
-      select#selectLocal
-        option(value="defecto") eliga..
-        each local in datos
-            option(value=local) #{local.nombre}
-
-  .container.py-xl-5.py-lg-3
-        .title-section.text-center
-            #map.col-lg-10.offset-lg-1
-  script(src="https://code.jquery.com/jquery-2.2.4.js", integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=", crossorigin="anonymous")
-  script.
-    var superchargers = !{JSON.stringify(datos)};
-    
-    $( "#selectLocal" )
-    .change(function () {
-        console.log($( "#selectLocal" ).val());
-        selectLocal($( "#selectLocal" ).val());
-    })
-    .change();
-
-    var map;
-    var markers= new Array();
   
-    function initMap() {
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -12.0199, lng: -77.0646 },
-        zoom: 13
-      });
-
-      superchargers.forEach(function(sc) {
-        var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(sc.latitud, sc.longitud),
-          map: map,
-          title: sc.nombre,
-          animation: google.maps.Animation.DROP
-        });
-        console.log(marker);
-        markers.push(marker);
-      });
-    }
-    function selectLocal(id){
-        if(id!="defecto"){
-            //alert("entro");
-            var localActual = JSON.parse(id);
-            console.log(localActual.nombre);
-              for (var i = 0; i < markers.length; i++) {
-                    markers[i].setMap(null);
-              }
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(localActual.latitud, localActual.longitud),
-                map: map,
-                title: localActual.nombre,
-                animation: google.maps.Animation.DROP
-            });
-            markers.push(marker);
+  .container.bg-white
+      h3.col-lg-8.offset-lg-2 Elige entre nuestros locales:  
+          select#selectLocal
+            option(value="defecto") eliga..
+            each local in datos
+                option(value=local) #{local.nombre}
+      style.
+        #map {
+          width: 80%;
+          height: 500px;}
         }
-    }
+      .container.py-xl-5.py-lg-3
+            .title-section.text-center
+                #map.col-lg-10.offset-lg-1
+      .container.mt-1
+        .container.py-xl-5.py-lg-3(style='background:#fff')
+          .row
+            .card.border-light.mb-3.col-sm-5
+              // Irvine - Ahora abierto
+              .card-body.text-success
+                h5.card-title Irvine - Ahora abierto
+                p 
+                  i.fa.fa-map-marker &nbsp&nbsp&nbsp 3080 Main Street Irvine, CA 92614
+                p 
+                  i.fa.fa-envelope  &nbsp&nbsp fast5xpressirvine@fast5xpress.com
+                p 
+                  i.fa.fa-mobile   &nbsp&nbsp&nbsp 949-477-9274
+                p
+                  i.fa.fa-clock-o  &nbsp&nbsp  Lunes-domingo
+  
+              //.card-footer.bg-transparent.border-success Footer
+            .card.border-light.mb-3.col-sm-7   
+              .card-body.text-success
+                h5.card-title(style='color:#FF5733') Precios de lavado  
+                .row  
+                  .card.col-sm-3.align-items-center(style='background:#fff;color:#9aa2b4')
+                    .card-title PLATINUM
+                    .card-body.btn(style='background:rgba(	237,237,241,.6);color:#9aa2b4') $14/W
+                  .card.col-sm-3.align-items-center(style='background:rgba(255,215,0,.6);color:#d7a000')
+                    .card-title GOLD
+                    .card-body.btn(style='background:rgba(255,215,0,.6);color:#d7a000') $14/W
+                  .card.col-sm-3.align-items-center(style='background:#DFDFE6;color:#747474')
+                    .card-title SILVER
+                    .card-body.btn(style='background:rgba(180, 180, 196,.6);color:#9aa2b4') $14/W
+                  .card.col-sm-3.align-items-center(style='background:#F9D0C0;color:#d65621;')
+                    .card-title BRONZE
+                    .card-body.btn(style='background:rgba(	214, 86, 33,.6);color:#9aa2b4') $14/W  
 
-  script(async defer src=`https://maps.googleapis.com/maps/api/js?key=AIzaSyAFXpZowO_X9qWM02i084Z8PMRp5f5sgI8&callback=initMap`)
+      script(src="https://code.jquery.com/jquery-2.2.4.js", integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=", crossorigin="anonymous")
+      script.
+        var superchargers = !{JSON.stringify(datos)};
+        
+        $( "#selectLocal" )
+        .change(function () {
+            console.log($( "#selectLocal" ).val());
+            selectLocal($( "#selectLocal" ).val());
+        })
+        .change();
+
+        var map;
+        var markers= new Array();
+      
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: -12.0199, lng: -77.0646 },
+            zoom: 13
+          });
+
+          superchargers.forEach(function(sc) {
+            var marker = new google.maps.Marker({
+              position: new google.maps.LatLng(sc.latitud, sc.longitud),
+              map: map,
+              title: sc.nombre,
+              animation: google.maps.Animation.DROP
+            });
+            console.log(marker);
+            markers.push(marker);
+          });
+        }
+        function selectLocal(id){
+            if(id!="defecto"){
+                //alert("entro");
+                var localActual = JSON.parse(id);
+                console.log(localActual.nombre);
+                  for (var i = 0; i < markers.length; i++) {
+                        markers[i].setMap(null);
+                  }
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(localActual.latitud, localActual.longitud),
+                    map: map,
+                    title: localActual.nombre,
+                    animation: google.maps.Animation.DROP
+                });
+                markers.push(marker);
+            }
+        }
+
+      script(async defer src=`https://maps.googleapis.com/maps/api/js?key=AIzaSyAFXpZowO_X9qWM02i084Z8PMRp5f5sgI8&callback=initMap`)

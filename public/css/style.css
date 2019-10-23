@@ -543,7 +543,7 @@ button.submit {
 .banner-info_agile_w3ls {
     padding-top: 10em;
     padding-left: 5em;
-}`
+}
 
 .banner-info_agile_w3ls h5 {
     font-family: 'Lato', sans-serif;
@@ -943,7 +943,7 @@ button.submit-contact:hover {
 
 /* inner pages */
 .main-banner-2 {
-    background: url(../images/inner-bg.jpg) no-repeat center;
+    background: url(../images/carwash/lavadodeautos.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;

@@ -10,11 +10,606 @@ body {
     margin-left: 70px;
     padding: 0;*/
     /*margin: 150px;*/
-    background: rgb(57, 132, 182);
+    background:url(../images/fondos/home-bodybg.jpg) no-repeat center center fixed;
     font-family: 'Lato', sans-serif;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #8a8683;
+    padding: 0;
+    margin: 0;
+}
+.pricing_box {
+    width: 900px;
+    float: left;
+}
+.dody-pricesection {
+    float: left;
+    width: 100%;
+    margin: 25px 0 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.dodyprice-servicesleft {
+    float: left;
+    width: 32%;
+    margin: 0;
+    background: #ebf3ff;
+    border: 1px solid #acf;
+    padding: 1%
+}
+.dodyprice-servicesleft .headingbg {
+    float: left;
+    width: 99%;
+    margin: 0;
+    border: 2px solid #377fe4;
+    padding: 40px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px #1a4ca7;
+    font-size: 24px;
+    text-align: center;
+    box-shadow: inset 0 0 20px #1c53b5;
+    -webkit-box-shadow: inset 0 0 20px #1c53b5;
+    -moz-box-shadow: inset 0 0 20px #1c53b5;
+    background: #296ccb
+}
+.dodyprice-servicesleft .list {
+    float: left;
+    width: 100%;
+    margin: 0
 }
 
+.dodyprice-servicesleft .list ul {
+    list-style: none
+}
+
+.dodyprice-servicesleft .list ul li {
+    margin: 0;
+    width: 98%;
+    float: left;
+    padding: 0 0 0 2%;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 15px;
+    color: #474747;
+    min-height: 35px;
+    line-height: 30px
+}
+
+.dodyprice-servicesleft .list ul li:nth-child(even) {
+    background: #c2daff;
+    border-bottom: 1px solid #97bfff
+}
+
+.dodyprice-servicesleft .list ul li:last-child {
+    font-size: 18px;
+    font-style: italic;
+    color: #282727;
+    margin: 10px 0 0
+}
+.dodyprice-platinum {
+    float: left;
+    width: 13%;
+    margin: 0 0 0 1%;
+    background: #fff;
+    border: 1px solid #cbd3e6;
+    padding: 1%;
+    position: relative;
+}
+
+.dodyprice-platinum .hedaing {
+    float: left;
+    width: 100%;
+    margin: 6px 0 13px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+    color: #9aa2b4;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.dodyprice-platinum .pricebg {
+    float: left;
+    width: 100%;
+    margin: 0;
+    background: url(../images/fondos/platinum-bg.jpg) top center no-repeat;
+    height: 69px
+}
+
+.dodyprice-platinum .dollertext {
+    float: left;
+    width: auto;
+    margin: 6px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 1px 1px #8892a9
+}
+
+.dodyprice-platinum .pricetext {
+    float: left;
+    width: auto;
+    margin: 10px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    color: #fff;
+    text-shadow: 1px 1px #8892a9;
+    font-weight: 700
+}
+
+.dodyprice-platinum .monthtext {
+    float: left;
+    width: auto;
+    margin: 36px 0 0 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 1px 1px #8892a9
+}
+
+.dodyprice-platinum .list {
+    float: left;
+    width: 100%;
+    margin: 0
+}
+
+.dodyprice-platinum .list ul {
+    list-style: none
+}
+
+.dodyprice-platinum .list ul li {
+    width: 98%;
+    float: left;
+    padding: 0 0 0 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #474747;
+    min-height: 35px;
+    text-align: center;
+    line-height: 35px
+}
+
+.dodyprice-platinum .list ul li:nth-child(even) {
+    background: #eaedf3;
+    border-bottom: 1px solid #d2d8e4
+}
+
+.dodyprice-platinum .buybutton {
+    float: left;
+    width: 100%;
+    margin: 10px 0 0;
+    background: url(../images/platinum-buynow.jpg) center center no-repeat;
+    height: 36px;
+    border: none;
+    cursor: pointer
+}
+.dodyprice-platinum .membdollertext {
+    float: left;
+    width: 98%;
+    margin: 6px 0 0 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px #8892a9
+}
+
+.dodyprice-platinum .membpricetext {
+    float: left;
+    width: auto;
+    margin: -11px 0 0 7%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 1px 1px #8892a9;
+    font-weight: 700
+}
+
+.dodyprice-platinum .membmonthtext {
+    float: left;
+    width: 97%;
+    margin: -12px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 1px 1px #8892a9;
+    text-align: right
+}
+.dodyprice-gold .hedaing {
+    float: left;
+    width: 100%;
+    margin: 6px 0 13px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+    color: #d7a000;
+    text-align: center;
+    text-transform: uppercase
+}
+.dodyprice-gold {
+    float: left;
+    width: 13%;
+    margin: 0 0 0 1%;
+    background: #faf3e0;
+    border: 1px solid #e2ce99;
+    padding: 1%;
+    position: relative;
+}
+a.tooltip {
+    outline: none;
+}
+a.tooltip2 {
+    outline: none;
+}
+
+a.tooltip2 strong {
+    line-height: 30px;
+}
+
+a.tooltip2:hover {
+    text-decoration: none;
+}
+
+a.tooltip2 span {
+    z-index: 10;
+    display: none;
+    padding: 10px;
+    width: 200px;
+    line-height: 16px;
+}
+
+a.tooltip2 span img {
+    border: none;
+    outline: none;
+}
+
+a.tooltip2:hover span {
+    display: inline;
+    position: absolute;
+    color: #111;
+    border: 1px solid #929294;
+    background: #B4B5B9;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+}
+
+a.tooltip2:hover span.bronze {
+    border: 1px solid #b86745;
+    background: #E67F54;
+}
+
+.callout {
+    z-index: 20;
+    position: absolute;
+    top: 30px;
+    border: 0;
+    left: -12px;
+}
+
+/*CSS3 extras*/
+
+a.tooltip2 span {
+    border-radius: 4px;
+    box-shadow: 5px 5px 8px #CCC;
+}
+.dodyprice-gold .pricebg {
+    float: left;
+    width: 100%;
+    margin: 0;
+    background: url(../images/fondos/gold-bg.jpg) top center no-repeat;
+    height: 69px
+}
+.dodyprice-gold .dollertext {
+    float: left;
+    width: auto;
+    margin: 6px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 1px 1px #ba8c07
+}
+.dodyprice-gold .pricetext {
+    float: left;
+    width: auto;
+    margin: 10px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    color: #fff;
+    text-shadow: 1px 1px #ba8c07;
+    font-weight: 700
+}
+.dodyprice-gold .monthtext {
+    float: left;
+    width: auto;
+    margin: 36px 0 0 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 1px 1px #ba8c07
+}
+.dodyprice-gold .list {
+    float: left;
+    width: 100%;
+    margin: 0
+}
+.dodyprice-gold .list ul {
+    list-style: none
+}
  
+.dodyprice-gold .list ul li {
+    width: 98%;
+    float: left;
+    padding: 0 0 0 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #474747;
+    min-height: 35px;
+    text-align: center;
+    line-height: 35px
+}
+.star_icon {
+    font-size: 22px;
+    color: #fff;
+    float: right;
+}
+.dodyprice-gold .list ul li:nth-child(even) {
+    background: #ffe28e;
+    border-bottom: 1px solid #edca70; 
+}
+.dodyprice-sliver {
+    float: left;
+    width: 13%;
+    margin: 0 0 0 1%;
+    background: #f0f1f7;
+    border: 1px solid #ccc;
+    padding: 1%;
+    position: relative;
+}
+
+.dodyprice-sliver .hedaing {
+    float: left;
+    width: 100%;
+    margin: 6px 0 13px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+    color: #747474;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.dodyprice-sliver .pricebg {
+    float: left;
+    width: 100%;
+    margin: 0;
+    background: url(../images/fondos/sliver-bg.jpg) top center no-repeat;
+    height: 69px
+}
+
+.dodyprice-sliver .dollertext {
+    float: left;
+    width: auto;
+    margin: 6px 0 0 6%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 1px 1px #7b7b7f
+}
+
+.dodyprice-sliver .pricetext {
+    float: left;
+    width: auto;
+    margin: 10px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    color: #fff;
+    text-shadow: 1px 1px #7b7b7f;
+    font-weight: 700
+}
+
+.dodyprice-sliver .monthtext {
+    float: left;
+    width: auto;
+    margin: 36px 0 0 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 1px 1px #7b7b7f
+}
+
+.dodyprice-sliver .list {
+    float: left;
+    width: 100%;
+    margin: 0
+}
+
+.dodyprice-sliver .list ul {
+    list-style: none
+}
+
+.dodyprice-sliver .list ul li {
+    width: 98%;
+    float: left;
+    padding: 0 0 0 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #474747;
+    min-height: 35px;
+    text-align: center;
+    line-height: 35px
+}
+
+.dodyprice-sliver .list ul li:nth-child(even) {
+    background: #dfdfe6;
+    border-bottom: 1px solid #cbc9ce
+}
+
+.dodyprice-sliver .buybutton {
+    float: left;
+    width: 100%;
+    margin: 10px 0 0;
+    background: url(../images/sliver-buynow.jpg) center center no-repeat;
+    height: 36px;
+    border: none;
+    cursor: pointer
+}
+.dodyprice-sliver .membdollertext {
+    float: left;
+    width: 98%;
+    margin: 6px 0 0 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px #7b7b7f
+}
+
+.dodyprice-sliver .membpricetext {
+    float: left;
+    width: auto;
+    margin: -11px 0 0 7%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 1px 1px #7b7b7f;
+    font-weight: 700
+}
+
+.dodyprice-sliver .membmonthtext {
+    float: left;
+    width: 97%;
+    margin: -12px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 1px 1px #7b7b7f;
+    text-align: right
+}
+.dodyprice-bronze {
+    float: left;
+    width: 13%;
+    margin: 0 0 0 1%;
+    background: #fff0eb;
+    border: 1px solid #e2bbac;
+    padding: 1%;
+    position: relative;
+}
+
+.dodyprice-bronze .hedaing {
+    float: left;
+    width: 100%;
+    margin: 6px 0 13px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+    color: #d65621;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.dodyprice-bronze .pricebg {
+    float: left;
+    width: 100%;
+    margin: 0;
+    background: url(../images/fondos/bronze-bg.jpg) top center no-repeat;
+    height: 69px
+}
+
+.dodyprice-bronze .dollertext {
+    float: left;
+    width: auto;
+    margin: 6px 0 0 6%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 1px 1px #99411d
+}
+
+.dodyprice-bronze .pricetext {
+    float: left;
+    width: auto;
+    margin: 10px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    color: #fff;
+    text-shadow: 1px 1px #99411d;
+    font-weight: 700
+}
+
+.dodyprice-bronze .monthtext {
+    float: left;
+    width: auto;
+    margin: 36px 0 0 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-shadow: 1px 1px #99411d
+}
+
+.dodyprice-bronze .list {
+    float: left;
+    width: 100%;
+    margin: 0
+}
+
+.dodyprice-bronze .list ul {
+    list-style: none
+}
+
+.dodyprice-bronze .list ul li {
+    width: 98%;
+    float: left;
+    padding: 0 0 0 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #474747;
+    min-height: 35px;
+    text-align: center;
+    line-height: 35px
+}
+
+.dodyprice-bronze .list ul li:nth-child(even) {
+    background: #f9d0c0;
+    border-bottom: 1px solid #ecb5a1
+}
+
+.dodyprice-bronze .buybutton {
+    float: left;
+    width: 100%;
+    margin: 10px 0 0;
+    background: url(../images/bronze-buynow.jpg) center center no-repeat;
+    height: 36px;
+    border: none;
+    cursor: pointer
+}
+.dodyprice-bronze .membdollertext {
+    float: left;
+    width: 98%;
+    margin: 6px 0 0 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px 1px #99411d
+}
+
+.dodyprice-bronze .membpricetext {
+    float: left;
+    width: auto;
+    margin: -11px 0 0 7%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: #fff;
+    text-shadow: 1px 1px #99411d;
+    font-weight: 700
+}
+
+.dodyprice-bronze .membmonthtext {
+    float: left;
+    width: 97%;
+    margin: -12px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 1px 1px #99411d;
+    text-align: right
+}
 .panel-tall .panel-body {
 height: 175px;
 }

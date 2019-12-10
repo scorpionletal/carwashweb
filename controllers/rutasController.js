@@ -32,15 +32,6 @@ controller.indexGet = function (req, res) {
     });
    }
 
-controller.aboutGet = function (req, res) {
-    console.log('inaboutt===========00dex');
-    
-    res.render('pages/products', {
-        title: 'Productos | RYF',
-        tipo: 'Productos'
-    });
-}
-
 controller.getHome = function (req,res){
     console.log('estoy en home');
     res.render('pages/home');
@@ -60,8 +51,8 @@ controller.getLocations = function (req,res){
    // res.render('pages/locations', {markers : markers});
 }
 controller.getAbout = function (req,res){
-    console.log('estoy en about==================00');
-    console.log(sess.email);
+    console.log('estoy en about');
+    //console.log(sess.email);
     res.render('pages/about');
 }
 controller.getContact = function (req,res){
